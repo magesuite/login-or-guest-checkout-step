@@ -1,0 +1,36 @@
+<div
+    class="block block-new-customer"
+    data-bind="attr: {'data-label': $t('or')}"
+>
+    <div class="block-title">
+        <strong
+            id="block-new-customer-heading"
+            role="heading"
+            aria-level="2"
+            data-bind="i18n: 'I am a new customer'"
+        ></strong>
+    </div>
+    <div class="block-content" aria-labelledby="block-new-customer-heading">
+        <p>
+            <strong data-bind="i18n: 'I want to checkout as a guest'"></strong>
+        </p>
+        <p
+            data-bind="i18n: 'Your order information will not be saved and your account will not be created. You can create an account after checkout.'"
+        ></p>
+        <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button
+                        data-role="opc-continue"
+                        type="submit"
+                        class="button action continue primary"
+                    >
+                        <span
+                            ><!-- ko i18n: 'Buy as a guest'--><!-- /ko --></span
+                        >
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

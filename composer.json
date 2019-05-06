@@ -1,0 +1,16 @@
+{
+  "name": "creativestyle/magesuite-login-or-guest-checkout-step",
+  "description": "Additional first step in checkout that allows to decide if customer want's to login, or go trough guest checkout.",
+  "type": "magento2-module",
+  "homepage": "https://creativestyle.de",
+  "license": "OSL-3.0",
+  "require": {
+    "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
+  },
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "MageSuite\\LoginOrGuestCheckoutStep\\": ""
+    }
+  }
+}
