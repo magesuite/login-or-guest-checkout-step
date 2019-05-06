@@ -1,0 +1,18 @@
+<li class="cs-login-or-guest__step" id="login-or-guest">
+    <div
+        id="checkout-step-title"
+        class="cs-login-or-guest__step-title step-title"
+        data-bind="i18n: 'Login'"
+        data-role="title"
+    ></div>
+    <div
+        class="cs-login-or-guest__step-content step-content"
+        data-role="content"
+    >
+        <div class="login-container">
+            <!-- ko foreach: getRegion('continuation-options') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </div>
+    </div>
+</li>

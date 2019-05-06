@@ -1,0 +1,42 @@
+//
+//  Common
+//  _____________________________________________
+
+.cs-login-or-guest {
+    &__step {
+        display: none;
+    }
+
+    &--active {
+        .cs-login-or-guest__step {
+            display: block;
+        }
+
+        .login-container {
+            .lib-css(margin-top, @checkout-shipping-address__margin-top);
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break)
+    when
+    (@extremum = 'min')
+    and
+    (@break = @screen__m) {
+    .cs-login-or-guest {
+        &--active {
+            .opc-wrapper {
+                padding-right: 0;
+                width: 100%;
+            }
+
+            .opc-sidebar {
+                display: none;
+            }
+        }
+    }
+}
