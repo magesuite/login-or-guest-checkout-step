@@ -58,7 +58,6 @@ define([
 
             var isLoggedInSubscription = isLoggedInObservable.subscribe(
                 function(isLoggedIn) {
-                    console.log({ isLoggedIn });
                     if (isLoggedIn) {
                         this.navigateToShipping();
                         isLoggedInSubscription.dispose();
