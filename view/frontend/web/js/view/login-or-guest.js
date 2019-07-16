@@ -72,12 +72,20 @@ define([
          */
         navigateToShipping: function() {
             var stepsObservable = stepNavigator.steps;
+            var activeStep;
+            var nextStep;
             // Make sure that shipping step is already initialized before navigating to it.
             if (stepsObservable().length > 2) {
                 stepNavigator.next();
             } else {
                 var subscription = stepsObservable.subscribe(function(steps) {
-                    if (steps[1] && steps[1].code === 'shipping') {
+                    activeStep =
+                        steps[stepNavigator.getActiveItemIndex()] || {};
+                    nextStep = steps[1] || {};
+                    if (
+                        activeStep.code === 'login-or-guest' &&
+                        nextStep.code === 'shipping'
+                    ) {
                         stepNavigator.next();
                         subscription.dispose();
                     }
