@@ -73,12 +73,9 @@ define([
             );
         },
 
-        /**
-         * Waits for all checkout steps to load and navigates user to shipping.
-         */
         navigateToShipping: function() {
-            // Make sure that shipping step is already initialized before navigating to it.
-            if (window.location.hash.replace('#', '') === 'login-or-guest') {
+            const activeStep = window.location.hash.replace('#', '');
+            if (!activeStep || activeStep === 'login-or-guest') {
                 stepNavigator.setHash('shipping');
             }
         },
