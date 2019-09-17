@@ -39,6 +39,9 @@ define([
             this.isVisible.subscribe(function(isVisible) {
                 $checkout.toggleClass('cs-login-or-guest--active', isVisible);
             });
+
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+
             // Move user directly to shipping step if they are logged in.
             this.navigateIfLoggedIn();
 
@@ -77,6 +80,7 @@ define([
             const activeStep = window.location.hash.replace('#', '');
             if (!activeStep || activeStep === 'login-or-guest') {
                 stepNavigator.setHash('shipping');
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
             }
         },
     });
