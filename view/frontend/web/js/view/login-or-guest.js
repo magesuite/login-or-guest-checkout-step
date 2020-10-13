@@ -77,7 +77,7 @@ define([
         },
 
         navigateToShipping: function() {
-            const activeStep = window.location.hash.replace('#', '');
+            var activeStep = window.location.hash.replace('#', '');
             if (!activeStep || activeStep === 'login-or-guest') {
                 stepNavigator.setHash('shipping');
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
