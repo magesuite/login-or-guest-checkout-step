@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magesuite" translate="label" sortOrder="500">
+            <label>MageSuite Extensions</label>
+        </tab>
+        <section id="checkout">
+            <label>Checkout</label>
+            <tab>magesuite</tab>
+            <resource>MageSuite_LoginOrGuestCheckoutStep::checkout</resource>
+            <group id="general">
+                <field id="show_register_section" translate="label comment" type="select" sortOrder="10" showInDefault="1" canRestore="1">
+                    <label>Show register section</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <frontend_class>cs-csfeature__logo</frontend_class>
+                </field>
+                <field id="show_email_field_for_guest" translate="label comment" type="select" sortOrder="20" showInDefault="1" canRestore="1">
+                    <label>Show email field for guest</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <frontend_class>cs-csfeature__logo</frontend_class>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
