@@ -1,0 +1,26 @@
+<div
+    class="block block-register"
+    data-bind="attr: {'data-label': $t('or')}"
+>
+    <div class="block-title">
+        <strong
+            id="block-register-heading"
+            role="heading"
+            aria-level="2"
+            data-bind="i18n: 'Register'"
+        ></strong>
+    </div>
+    <div class="block-content" aria-labelledby="block-register-heading">
+        <p>
+            <strong data-bind="i18n: 'Register customer account'"></strong>
+        </p>
+        <p data-bind="html: getRegisterText()" class="block-register-text"></p>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <a type="submit" class="action register primary" data-bind="attr: { href: registerUrl }">
+                    <span data-bind="i18n: 'Register'"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
