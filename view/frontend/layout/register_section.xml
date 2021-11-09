@@ -1,0 +1,41 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="login-or-guest" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="register-new-account" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">0</item>
+                                                    <item name="component" xsi:type="string">MageSuite_LoginOrGuestCheckoutStep/js/view/register-new-account</item>
+                                                    <item name="displayArea" xsi:type="string">continuation-options</item>
+                                                    <item name="config" xsi:type="array">
+                                                        <item name="registerText" xsi:type="string" translate="true">Creating an account has many benefits: check out faster, keep more than one address, track orders and more...</item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="page.wrapper">
+            <block name="create-account-text" template="MageSuite_LoginOrGuestCheckoutStep::create-account-text.phtml">
+                <block class="MageSuite\ThemeHelpers\Block\Cms\CacheableBlock" name="login-page-create-account">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">login-page-create-account</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

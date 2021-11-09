@@ -17,6 +17,9 @@
         <p
             data-bind="i18n: 'Your order information will not be saved and your account will not be created. You can create an account after checkout.'"
         ></p>
+            <!-- ko foreach: getRegion('fields') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
         <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
             <div class="actions-toolbar">
                 <div class="primary">

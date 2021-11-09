@@ -17,6 +17,10 @@
     <!-- ko template: getTemplate() --><!-- /ko -->
     <!--/ko-->
     <div class="block-content" aria-labelledby="block-customer-login-heading">
+        <p>
+            <strong data-bind="i18n: 'Login as customer'"></strong>
+        </p>
+        <p data-bind="i18n: 'Login with your account.'"></p>
         <form data-role="login" data-bind="submit:login" method="post">
             <div
                 class="fieldset"
