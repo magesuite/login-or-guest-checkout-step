@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <checkout>
+            <first_step>
+                <show_register_section>0</show_register_section>
+                <show_email_field_for_guest>0</show_email_field_for_guest>
+            </first_step>
+        </checkout>
+    </default>
+</config>
