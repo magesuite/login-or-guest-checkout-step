@@ -9,7 +9,7 @@ define([
     return Component.extend({
         defaults: {
             template: 'MageSuite_LoginOrGuestCheckoutStep/register-new-account',
-            registerUrl: url.build('customer/account/create'),
+            registerUrl: url.build('checkout/customer_account/create'),
         },
         initialize: function(){
             this._super();
