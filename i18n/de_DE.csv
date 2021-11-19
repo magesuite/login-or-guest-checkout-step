@@ -6,3 +6,6 @@ Password,Passwort
 Login,Anmelden
 "Register customer account","Erstellen Sie ein Kundenkonto"
 "I want to checkout as a guest","Ich möchte als Gast bestellen"
+"I already have an account","Ich habe ein Konto"
+"Your order information will not be saved and your account will not be created. You can create an account after checkout.","Ihre Bestelldaten werden nicht gespeichert und Ihr Konto wird nicht erstellt. Sie können ein Konto nach der Bestellung erstellen."
+"Buy as a guest","Als Gast bestellen"
