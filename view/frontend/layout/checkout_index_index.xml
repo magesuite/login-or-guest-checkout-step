@@ -32,7 +32,7 @@
                                                             <item name="displayArea" xsi:type="string">messages</item>
                                                         </item>
                                                         <item name="showPassword" xsi:type="array">
-                                                            <item name="sortOrder" xsi:type="string">1</item>
+                                                            <item name="sortOrder" xsi:type="string">0</item>
                                                             <item name="component" xsi:type="string">Magento_Customer/js/show-password</item>
                                                             <item name="displayArea" xsi:type="string">show-password</item>
                                                             <item name="passwordSelector" xsi:type="string">#login-password</item>
