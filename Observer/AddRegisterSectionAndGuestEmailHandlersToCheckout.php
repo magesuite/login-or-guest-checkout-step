@@ -38,16 +38,19 @@ class AddRegisterSectionAndGuestEmailHandlersToCheckout implements \Magento\Fram
     {
         $currentAction = $this->request->getFullActionName();
 
-        if ($currentAction != self::CHECKOUT_INDEX_ACTION_NAME || !$this->configuration->showRegisterSection()) {
+        if ($currentAction != self::CHECKOUT_INDEX_ACTION_NAME) {
             return;
         }
 
+        /** @var \Magento\Framework\View\Model\Layout\Merge $layoutUpdate */
+        $layoutUpdate = $observer->getEvent()->getLayout()->getUpdate();
+
         if ($this->configuration->showRegisterSection()) {
-            $observer->getEvent()->getLayout()->getUpdate()->addHandle(self::REGISTER_SECTION_LAYOUT_HANDLER);
+            $layoutUpdate->addHandle(self::REGISTER_SECTION_LAYOUT_HANDLER);
         }
 
         if ($this->configuration->showEmailFieldForGuest()) {
-            $observer->getEvent()->getLayout()->getUpdate()->addHandle(self::GUEST_EMAIL_LAYOUT_HANDLER);
+            $layoutUpdate->addHandle(self::GUEST_EMAIL_LAYOUT_HANDLER);
         }
     }
 }

@@ -1,0 +1,13 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:MageSuite_Changelog:etc/changelog.xsd">
+    <module id="MageSuite_LoginOrGuestCheckoutStep" name="MageSuite_LoginOrGuestCheckoutStep">
+        <changelog>
+            <tag version="1.1.7" date="2022-09-23">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Show email field even if registration section is disabled</overview>
+                    <ticket_id>RK-221</ticket_id>
+                </entry>
+            </tag>
+        </changelog>
+    </module>
+</config>
