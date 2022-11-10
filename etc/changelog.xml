@@ -8,6 +8,13 @@
                     <ticket_id>RK-221</ticket_id>
                 </entry>
             </tag>
+            <tag version="1.1.8" date="2022-11-10">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix error with tooltip template loading fail by adding empty tooltip string for guest email</overview>
+                    <ticket_id>IPET-1683</ticket_id>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>
