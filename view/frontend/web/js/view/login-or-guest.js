@@ -80,6 +80,7 @@ define([
             var activeStep = window.location.hash.replace('#', '');
             if (!activeStep || activeStep === 'login-or-guest') {
                 stepNavigator.setHash('shipping');
+                stepNavigator.navigateTo('shipping');
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
             }
         },
