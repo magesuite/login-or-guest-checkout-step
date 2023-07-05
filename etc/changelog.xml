@@ -15,6 +15,13 @@
                     <ticket_id>IPET-1683</ticket_id>
                 </entry>
             </tag>
+            <tag version="1.2.1" date="2023-07-05">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix active step code for logged usrs moved directly to shipping step</overview>
+                    <ticket_id>RK-632</ticket_id>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>
