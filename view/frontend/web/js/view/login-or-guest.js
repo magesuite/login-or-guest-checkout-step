@@ -3,9 +3,10 @@ define([
     'uiComponent',
     'underscore',
     'Magento_Checkout/js/model/step-navigator',
+    'Magento_Checkout/js/model/quote',
     'jquery',
     'Magento_Customer/js/model/customer',
-], function(ko, Component, _, stepNavigator, $, customer) {
+], function(ko, Component, _, stepNavigator, quote, $, customer) {
     'use strict';
 
     var $checkout = $('#checkout');
@@ -57,12 +58,16 @@ define([
         },
 
         /**
-         * Moves user directly to shipping step if they are logged in.
+         * Moves user directly to shipping step if they are logged in and to payment if quote has virtual items only.
          */
         navigateIfLoggedIn: function() {
             var isLoggedInObservable = customer.isLoggedIn;
             if (isLoggedInObservable()) {
-                return this.navigateToShipping();
+                if (!quote.isVirtual()) {
+                    return this.navigateToShipping();
+                } else {
+                    return this.navigateToPayment();
+                }
             }
 
             var isLoggedInSubscription = isLoggedInObservable.subscribe(
@@ -82,6 +87,20 @@ define([
                 stepNavigator.setHash('shipping');
                 stepNavigator.navigateTo('shipping');
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
+            }
+        },
+
+        navigateToPayment: function() {
+            var activeStep = window.location.hash.replace('#', '');
+            //additonal check if payment step is already active - needed for checkout reload
+            if (!activeStep || activeStep === 'login-or-guest' || activeStep === 'payment') {
+                stepNavigator.setHash('payment');
+                stepNavigator.navigateTo('payment');
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+                if (quote.isVirtual()) {
+                    window.checkoutConfig.selectedShippingMethod = '';
+                }
             }
         },
     });

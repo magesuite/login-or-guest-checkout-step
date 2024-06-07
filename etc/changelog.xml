@@ -22,6 +22,13 @@
                     <ticket_id>RK-632</ticket_id>
                 </entry>
             </tag>
+            <tag version="1.2.2" date="2024-06-05">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix error in logic - redirect logged in user with virtual quote directly to payment step</overview>
+                    <ticket_id>RK-1489</ticket_id>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>
