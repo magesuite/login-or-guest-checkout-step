@@ -29,6 +29,13 @@
                     <ticket_id>RK-1489</ticket_id>
                 </entry>
             </tag>
+            <tag version="1.2.3" date="2024-08-22">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix issue with redirects to noroute for virtual quote on payment step on refresh</overview>
+                    <ticket_id>HAAR-4335</ticket_id>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>
