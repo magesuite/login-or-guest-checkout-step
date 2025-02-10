@@ -11,20 +11,21 @@ define([
     return Component.extend({
         defaults: {
             template: 'MageSuite_LoginOrGuestCheckoutStep/continue-as-guest',
-            customerEmail: false
+            customerEmail: false,
+            storePickupEmail: false,
         },
 
         /** @inheritdoc */
         initialize: function() {
             this._super();
 
-            var self = this;
-
-            registry.async(
-                'checkout.steps.login-or-guest.continue-as-guest.customer-email'
-            )(function(element) {
-                self.customerEmail = element;
+            registry.async(`${this.name}.customer-email`)(element => {
+                this.customerEmail = element;
+                this.customerEmail.email.subscribe(this._onEmailUpdated.bind(this));
             });
+            registry.async('checkout.steps.store-pickup.store-selector.customer-email')(
+                element => this.storePickupEmail = element
+            );
         },
 
         /**
@@ -43,5 +44,11 @@ define([
                 stepNavigator.next();
             }
         },
+
+        _onEmailUpdated: function(value) {
+            if (this.storePickupEmail?.email) {
+                this.storePickupEmail.email(value);
+            }
+        }
     });
 });
