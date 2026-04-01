@@ -28,9 +28,12 @@
                         type="submit"
                         class="button action continue primary"
                     >
-                        <span
-                            ><!-- ko i18n: 'Buy as a guest'--><!-- /ko --></span
-                        >
+                        <span data-bind="i18n: 'Buy as a guest'"></span>
+                        <img
+                            class="inline-svg icon"
+                            data-bind="attr: { src: require.toUrl('images/icons/arrow_next.svg') }"
+                            alt=""
+                        />
                     </button>
                 </div>
             </div>
