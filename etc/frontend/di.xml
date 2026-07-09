@@ -7,4 +7,7 @@
             </argument>
         </arguments>
     </type>
+    <type name="Magento\Customer\Controller\Ajax\Login">
+        <plugin name="normalize_captcha_form_id" type="MageSuite\LoginOrGuestCheckoutStep\Plugin\Customer\Controller\Ajax\NormalizeCaptchaFormId" sortOrder="10"/>
+    </type>
 </config>

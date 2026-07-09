@@ -3,6 +3,8 @@
     <module name="MageSuite_LoginOrGuestCheckoutStep" setup_version="1.0.0">
         <sequence>
             <module name="Magento_Checkout"/>
+            <module name="Magento_Customer"/>
+            <module name="Magento_Captcha"/>
         </sequence>
     </module>
 </config>

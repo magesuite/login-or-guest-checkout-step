@@ -36,10 +36,10 @@ define([
                 if (!this.customerEmail.validateEmail()) {
                     // trigger validation by focusing in and out on field
                     this.customerEmail.emailFocused(true);
-                    this.customerEmail.emailFocused(false); 
+                    this.customerEmail.emailFocused(false);
                 } else {
                     stepNavigator.next();
-                } 
+                }
             } else {
                 stepNavigator.next();
             }
